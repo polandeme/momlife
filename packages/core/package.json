@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "The core module of beijing hell game.",
   "main": "lib/index.js",
-  "author": "shadeofgod<zoubingwu@gmail.com>",
+  "author": "polandeme<polandeme@gmail.com>",
   "license": "MIT",
   "scripts": {
     "build": "babel src --out-dir lib",
