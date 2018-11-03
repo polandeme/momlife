@@ -25,5 +25,8 @@
     "dev": "npm run build && node ./packages/bearyhubot/lib/index.js",
     "prod": "ENABLE_NODE_LOG=YES pm2 start ./packages/bearyhubot/lib/index.js --watch",
     "lint": "eslint packages/*/src/**"
+  },
+  "dependencies": {
+    "request": "^2.88.0"
   }
 }

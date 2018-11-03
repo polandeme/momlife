@@ -27,5 +27,5 @@ export const INTRODUCTION_TEMPLATE = `“北京浮生记”的玩法十分简单
 。。。
 
 
-对我输入 \`start\` 或 \'出身\' 开始吧！
+对我输入 \`start\` 或 \'出生\' 开始吧！
 `;

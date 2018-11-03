@@ -1,4 +1,5 @@
 import commandHandlers from './commandHandlers';
+import request from request;
 
 export default async function commands(clients) {
   const { rtm, http, RTMClientEvents: Events } = clients;
@@ -6,6 +7,26 @@ export default async function commands(clients) {
   const me = await http.user.me();
 
   function handleCommand(message, reply) {
+    console.log(message);
+    console.log(message.text)
+
+
+    const handler = commandHandlers[command];
+    if (typeof handler === 'function') {
+      handler.call(message, options, reply);
+    } else {
+      reply('欢迎来到瞬间人生，请输入 `start` 开始游戏，`status` 查看当前状态，`help` 查看游戏介绍，或输入 `cmd` 查看所有可用的命令。 ');
+    }
+  }
+
+
+
+// 以下为原版
+
+  function handleCommand_bak(message, reply) {
+    console.log(message);
+    console.log(message.text)
+
     const [cmd, ...options] = message.text.split(/\s+/);
     const command = cmd.toLowerCase();
 
